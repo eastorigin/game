@@ -13,7 +13,7 @@ public class Game2 {
 		System.out.println("\"나\"로 시작하는 두 글자 이상의 단어를 입력하세요.");
 		
 		while(true) {
-			String answerWord= keyboard.nextLine();
+			String answerWord= keyboard.nextLine().trim();
 			
 			gameInfo2.inputAnswerWord(answerWord);
 			

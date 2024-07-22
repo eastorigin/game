@@ -6,12 +6,12 @@ public class GameInfo2 {
 	
 	private String answerWord;
 	
-	private String firstLetter;
+	public final String FIRST_LETTER = "나";
 	
 	private int wordCount;
 	
 	public GameInfo2() {
-		this.firstLetter = "나";
+		this.wordCount = 0;
 	}
 	
 	public void inputAnswerWord(String answerWord) {
@@ -23,7 +23,7 @@ public class GameInfo2 {
 	}
 	
 	public boolean isStartLetter() {
-		return this.answerWord.startsWith(this.firstLetter);
+		return this.answerWord.startsWith(this.FIRST_LETTER);
 	}
 	
 	public void addCount() {

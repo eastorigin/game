@@ -4,14 +4,14 @@ public class GameInfo3 {
 
 	public final int WORD_LENGTH = 2;
 	
-	private String answerWord;
+	public final String LAST_LATTER = "기";
 	
-	private String lastLetter;
+	private String answerWord;
 	
 	private int wordCount;
 	
 	public GameInfo3() {
-		this.lastLetter = "기";
+		this.wordCount = 0;
 	}
 	
 	public void inputAnswerWord(String answerWord) {
@@ -23,7 +23,7 @@ public class GameInfo3 {
 	}
 	
 	public boolean isLastLetter() {
-		return this.answerWord.endsWith(this.lastLetter);
+		return this.answerWord.endsWith(this.LAST_LATTER);
 	}
 	
 	public void addCount() {

@@ -13,7 +13,7 @@ public class Game3 {
 		System.out.println("\"기\"로 끝나는 두 글자 이상의 단어를 입력하세요.");
 		
 		while(true) {
-			String answerWord = keyboard.nextLine();
+			String answerWord = keyboard.nextLine().trim();
 			
 			gameInfo3.inputAnswerWord(answerWord);
 			
