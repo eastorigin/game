@@ -11,6 +11,7 @@ public class Game2 {
 		GameInfo2 gameInfo2 = new GameInfo2();
 		
 		System.out.println("\"나\"로 시작하는 두 글자 이상의 단어를 입력하세요.");
+		System.out.println("중복 단어는 불가능합니다");
 		
 		while(true) {
 			String answerWord= keyboard.nextLine().trim();
@@ -24,6 +25,12 @@ public class Game2 {
 			
 			boolean isStartLetter = gameInfo2.isStartLetter();
 			if(!isStartLetter) {
+				break;
+			}
+			
+			boolean isSameLetter = gameInfo2.isSameLetter();
+			if(isSameLetter) {
+				System.out.println("중복 단어는 입력 하실 수 없습니다");
 				break;
 			}
 			

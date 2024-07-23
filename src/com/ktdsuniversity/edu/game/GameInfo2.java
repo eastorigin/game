@@ -30,6 +30,11 @@ public class GameInfo2 {
 		return this.answerWord.startsWith(this.FIRST_LETTER);
 	}
 	
+	public boolean isSameLetter() {
+		return this.usedWords.toString().contains(this.answerWord);
+		// toString()으로 변환 후 contains 가능
+	}
+	
 	public void addCount() {
 		this.wordCount++;
 	}

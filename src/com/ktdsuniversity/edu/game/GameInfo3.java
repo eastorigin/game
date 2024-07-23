@@ -30,6 +30,10 @@ public class GameInfo3 {
 		return this.answerWord.endsWith(this.LAST_LATTER);
 	}
 	
+	public boolean isSameLetter() {
+		return this.usedWords.toString().contains(answerWord);
+	}
+	
 	public void addCount() {
 		this.wordCount++;
 	}
