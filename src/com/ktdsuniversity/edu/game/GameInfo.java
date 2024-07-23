@@ -5,6 +5,11 @@ public class GameInfo {
 	public final int WORD_LENGTH = 3;
 
 	/**
+	 * 이어나간 단어들을 기록
+	 */
+	private StringBuffer usedWords;
+	
+	/**
 	 * 현재(제시)단어
 	 */
 	private String currentWord;
@@ -30,8 +35,10 @@ public class GameInfo {
 	private int nextWordLength;
 	
 	public GameInfo(String currentWord) {
+		this.usedWords = new StringBuffer();
 		this.currentWord = currentWord;
 		this.lastLetter = this.currentWord.substring(this.currentWord.length() - 1);
+		this.usedWords.append(this.currentWord);
 	}
 	
 	public void inputNextWord(String nextWord) {
@@ -54,10 +61,16 @@ public class GameInfo {
 	public void changeCurrentWord() {
 		this.currentWord = this.nextWord;
 		this.lastLetter = this.currentWord.substring(this.currentWord.length() -1);
+		this.usedWords.append("\n");
+		this.usedWords.append(this.currentWord);
 	}
 	
 	public void gameOver() {
 		System.out.println("게임이 종료되었습니다");
 		System.out.println("이어나간 단어의 수는 " + this.gameCount + "번 입니다");
+		
+		String words = this.usedWords.toString();
+		System.out.println("이어나간 단어들입니다.");
+		System.out.println(words);
 	}
 }

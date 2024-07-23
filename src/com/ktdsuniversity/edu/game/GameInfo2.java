@@ -4,14 +4,18 @@ public class GameInfo2 {
 
 	public final int WORD_LENGTH = 2;
 	
-	private String answerWord;
-	
 	public final String FIRST_LETTER = "나";
+	
+	private String answerWord;
 	
 	private int wordCount;
 	
+	private StringBuffer usedWords;
+	
 	public GameInfo2() {
 		this.wordCount = 0;
+		this.usedWords = new StringBuffer();
+		this.answerWord = "";
 	}
 	
 	public void inputAnswerWord(String answerWord) {
@@ -30,8 +34,16 @@ public class GameInfo2 {
 		this.wordCount++;
 	}
 	
+	public void addUsedWords() {
+		this.usedWords.append(this.answerWord);
+		this.usedWords.append("\n");
+	}
+	
 	public void gameOver() {
 		System.out.println("게임이 종료 되었습니다.");
 		System.out.println("이어나간 단어의 수: " + this.wordCount + "개");
+		
+		System.out.println("이어나간 단어들 목록");
+		System.out.println(this.usedWords.toString());
 	}
 }

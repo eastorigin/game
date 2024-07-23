@@ -28,6 +28,8 @@ public class Game3 {
 			}
 			
 			gameInfo3.addCount();
+			
+			gameInfo3.addUsedWords();
 		}
 		gameInfo3.gameOver();
 	}

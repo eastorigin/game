@@ -29,6 +29,8 @@ public class Game2 {
 			
 			gameInfo2.addCount();
 			
+			gameInfo2.addUsedWords();
+			
 		}
 		gameInfo2.gameOver();
 	}
